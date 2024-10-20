@@ -1,113 +1,73 @@
 import { FC } from "react";
 import { TracingBeam } from "./ui/tracing-beam";
-import Image from "next/image";
-import { cn } from "@/lib/utils";
+import Image, { StaticImageData } from "next/image";
 
-interface BlogProps {}
+interface Strategy {
+  title: string;
+  description: string;
+  vedarkUsage: string;
+}
 
-const dummyContent = [
-  {
-    title: "Lorem Ipsum Dolor Sit Amet",
-    description: (
-      <>
-        <p>
-          Sit duis est minim proident non nisi velit non consectetur. Esse
-          adipisicing laboris consectetur enim ipsum reprehenderit eu deserunt
-          Lorem ut aliqua anim do. Duis cupidatat qui irure cupidatat incididunt
-          incididunt enim magna id est qui sunt fugiat. Laboris do duis pariatur
-          fugiat Lorem aute sit ullamco. Qui deserunt non reprehenderit dolore
-          nisi velit exercitation Lorem qui do enim culpa. Aliqua eiusmod in
-          occaecat reprehenderit laborum nostrud fugiat voluptate do Lorem culpa
-          officia sint labore. Tempor consectetur excepteur ut fugiat veniam
-          commodo et labore dolore commodo pariatur.
-        </p>
-        <p>
-          Dolor minim irure ut Lorem proident. Ipsum do pariatur est ad ad
-          veniam in commodo id reprehenderit adipisicing. Proident duis
-          exercitation ad quis ex cupidatat cupidatat occaecat adipisicing.
-        </p>
-        <p>
-          Tempor quis dolor veniam quis dolor. Sit reprehenderit eiusmod
-          reprehenderit deserunt amet laborum consequat adipisicing officia qui
-          irure id sint adipisicing. Adipisicing fugiat aliqua nulla nostrud.
-          Amet culpa officia aliquip deserunt veniam deserunt officia
-          adipisicing aliquip proident officia sunt.
-        </p>
-      </>
-    ),
-    badge: "React",
-    image:
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=3540&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    title: "Lorem Ipsum Dolor Sit Amet",
-    description: (
-      <>
-        <p>
-          Ex irure dolore veniam ex velit non aute nisi labore ipsum occaecat
-          deserunt cupidatat aute. Enim cillum dolor et nulla sunt exercitation
-          non voluptate qui aliquip esse tempor. Ullamco ut sunt consectetur
-          sint qui qui do do qui do. Labore laborum culpa magna reprehenderit ea
-          velit id esse adipisicing deserunt amet dolore. Ipsum occaecat veniam
-          commodo proident aliqua id ad deserunt dolor aliquip duis veniam sunt.
-        </p>
-        <p>
-          In dolore veniam excepteur eu est et sunt velit. Ipsum sint esse
-          veniam fugiat esse qui sint ad sunt reprehenderit do qui proident
-          reprehenderit. Laborum exercitation aliqua reprehenderit ea sint
-          cillum ut mollit.
-        </p>
-      </>
-    ),
-    badge: "Changelog",
-    image:
-      "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&q=80&w=3540&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    title: "Lorem Ipsum Dolor Sit Amet",
-    description: (
-      <>
-        <p>
-          Ex irure dolore veniam ex velit non aute nisi labore ipsum occaecat
-          deserunt cupidatat aute. Enim cillum dolor et nulla sunt exercitation
-          non voluptate qui aliquip esse tempor. Ullamco ut sunt consectetur
-          sint qui qui do do qui do. Labore laborum culpa magna reprehenderit ea
-          velit id esse adipisicing deserunt amet dolore. Ipsum occaecat veniam
-          commodo proident aliqua id ad deserunt dolor aliquip duis veniam sunt.
-        </p>
-      </>
-    ),
-    badge: "Launch Week",
-    image:
-      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&q=80&w=3506&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-];
-const Blog: FC<BlogProps> = ({}) => {
+interface BlogPostProps {
+  content: {
+    title: string;
+    intro: string;
+    strategies: Strategy[];
+    conclusion: string;
+    disclaimer: string;
+  };
+  author: string;
+  date: string;
+  imageUrl?: StaticImageData;
+}
+
+const Blog: FC<BlogPostProps> = ({ content, imageUrl, author, date }) => {
   return (
     <TracingBeam className="px-6">
-      <div className="max-w-2xl mx-auto antialiased pt-4 relative text-white">
-        {dummyContent.map((item, index) => (
-          <div key={`content-${index}`} className="mb-10">
-            <h2 className="bg-black text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
-              {item.badge}
-            </h2>
-
-            <p className="text-xl mb-4">{item.title}</p>
-
-            <div className="text-sm  prose prose-sm dark:prose-invert">
-              {item?.image && (
-                <Image
-                  src={item.image}
-                  alt="blog thumbnail"
-                  height="1000"
-                  width="1000"
-                  className="rounded-lg mb-10 object-cover"
-                />
-              )}
-              {item.description}
-            </div>
+      <div className="max-w-screen-xl mx-auto antialiased pt-4 mb-10 relative text-white">
+        <div className="bg-gray-950 rounded-lg p-8">
+          <h1 className="text-3xl font-bold text-white mb-2">
+            {content.title}
+          </h1>
+          <div className="flex items-center mb-6">
+            <span className="text-gray-400 mr-2">By {author}</span>
+            <span className="text-gray-400">|</span>
+            <span className="text-gray-400 ml-2">{date}</span>
           </div>
-        ))}
+          {imageUrl && (
+            <div className="mb-8">
+              <Image
+                src={imageUrl}
+                alt="Blog Post Image"
+                width={800}
+                height={450}
+                className="rounded-lg"
+              />
+            </div>
+          )}
+          <div className="prose prose-invert max-w-none mb-8">
+            <p>{content.intro}</p>
+          </div>
+
+          <div className="prose prose-invert max-w-none">
+            {content.strategies.map((strategy, index) => (
+              <div key={index} className="mb-8">
+                <h2 className="text-2xl font-bold text-white mb-4">
+                  {index + 1}. {strategy.title}
+                </h2>
+                <p>{strategy.description}</p>
+                <p className="italic">{strategy.vedarkUsage}</p>
+              </div>
+            ))}
+            <div className="bg-gray-800 rounded-lg p-6">
+              <p className="text-lg font-semibold text-white mb-2">
+                Conclusion:
+              </p>
+              <p>{content.conclusion}</p>
+            </div>
+            <p className="text-gray-400 mt-4">{content.disclaimer}</p>
+          </div>
+        </div>
       </div>
     </TracingBeam>
   );

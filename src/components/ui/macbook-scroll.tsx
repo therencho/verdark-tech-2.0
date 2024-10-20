@@ -24,6 +24,7 @@ import { IconCommand } from "@tabler/icons-react";
 import { IconCaretLeftFilled } from "@tabler/icons-react";
 import { IconCaretDownFilled } from "@tabler/icons-react";
 import Image from "next/image";
+import logo from "../../../public/assets/vedark-logo.png";
 
 export const MacbookScroll = ({
   src,
@@ -68,7 +69,7 @@ export const MacbookScroll = ({
   return (
     <div
       ref={ref}
-      className="min-h-[200vh]  flex flex-col items-center py-0 md:py-80 justify-start flex-shrink-0 [perspective:800px] transform md:scale-100  scale-[0.35] sm:scale-50"
+      className=" relative -top-20 md:top-20 md:min-h-[150vh] min-h-[20vh] flex flex-col items-center justify-start flex-shrink-0 [perspective:800px] transform md:scale-100  scale-[0.60] sm:scale-50"
     >
       <motion.h2
         style={{
@@ -148,9 +149,13 @@ export const Lid = ({
           }}
           className="absolute inset-0 bg-[#010101] rounded-lg flex items-center justify-center"
         >
-          <span className="text-white">
-            <AceternityLogo />
-          </span>
+          <Image
+            src={logo}
+            className="h-8 w-auto "
+            alt=" Logo"
+            width={100}
+            height={100}
+          />
         </div>
       </div>
       <motion.div
@@ -645,23 +650,3 @@ export const OptionKey = ({ className }: { className: string }) => {
   );
 };
 
-const AceternityLogo = () => {
-  return (
-    <svg
-      width="66"
-      height="65"
-      viewBox="0 0 66 65"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className="h-3 w-3 text-white"
-    >
-      <path
-        d="M8 8.05571C8 8.05571 54.9009 18.1782 57.8687 30.062C60.8365 41.9458 9.05432 57.4696 9.05432 57.4696"
-        stroke="currentColor"
-        strokeWidth="15"
-        strokeMiterlimit="3.86874"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-};

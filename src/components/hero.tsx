@@ -3,9 +3,11 @@ import discount from "../../public/assets/Discount.svg";
 import robot from "../../public/assets/crypto.png";
 import Image from "next/image";
 import arrowUp from "../../public/assets/arrow-up.svg";
+import Link from "next/link";
 
 const GetStarted = () => (
-  <div
+  <Link href='/pricing' >
+<div
     className={`${styles.flexCenter} w-[140px] h-[140px] rounded-full bg-blue-gradient p-[2px] cursor-pointer`}
   >
     <div
@@ -27,48 +29,49 @@ const GetStarted = () => (
       </p>
     </div>
   </div>
+  </Link>
+  
 );
 const Hero = () => {
   return (
     <section
       id="home"
-      className={`flex md:flex-row flex-col ${styles.paddingY}`}
+      className={`flex md:flex-row flex-col ${styles.paddingY} max-w-screen-xl mx-auto`}
     >
-      <div
-        className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}
-      >
-        <div className="flex flex-row items-center py-[6px] px-4 bg-discount-gradient rounded-[10px] mb-2">
+      <div className={`flex-1 ${styles.flexStart} flex-col `}>
+        <div className="flex flex-row items-center py-[6px] px-4 mx-auto md:mx-0 bg-slate-900 rounded-[10px] mb-2">
           <Image src={discount} alt="discount" className="w-[32px] h-[32px]" />
           <p className={`${styles.paragraph} ml-2`}>
-            <span className="text-white">20%</span> Discount For{" "}
-            <span className="text-white">1 Month</span> Account
+            <span className="text-white">Maximise Profit,</span>
+            <span className="text-gradient"> Use Vedark</span>{" "}
           </p>
         </div>
 
         <div className="flex flex-row justify-between items-center w-full">
-          <h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100.8px] leading-[75px]">
-            The Next <br className="sm:block hidden" />{" "}
-            <span className="text-gradient">Generation</span>{" "}
+          <h1 className="flex-1 text-center md:text-start font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100.8px] leading-[75px]">
+            The Future of <br className="sm:block hidden" />{" "}
+            <span className="text-gradient">Crypto Trading</span>{" "}
           </h1>
         </div>
 
-        <h1 className="font-poppins font-semibold ss:text-[68px] text-[52px] text-white ss:leading-[100.8px] leading-[75px] w-full">
-          Payment Method.
+        <h1 className="font-poppins text-center  md:text-start font-semibold ss:text-[68px] text-[52px] text-white ss:leading-[100.8px] leading-[75px] w-full">
+          is Here.
         </h1>
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center text-center md:text-start">
           <p className={`${styles.paragraph} max-w-[470px] mt-5 text-white`}>
-            Our team of experts uses a methodology to identify the credit cards
-            most likely to fit your needs. We examine annual percentage rates,
-            annual fees.
+            Sit back and relax while Vedark manages your crypto trades
+            with its advanced automation and risk management features.
           </p>
-          <GetStarted />
+          <div className="hidden md:block ml-8">
+            <GetStarted />
+          </div>
         </div>
         {/* <div className="flex justify-end w-full">
           </div> */}
       </div>
 
       <div
-        className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}
+        className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative md:-right-[7.4rem] -right-4`}
       >
         <Image
           src={robot}

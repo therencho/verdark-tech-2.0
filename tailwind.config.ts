@@ -11,6 +11,8 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
+    './node_modules/preline/preline.js',
+
 	],
   prefix: "",
   theme: {
@@ -86,7 +88,8 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"),addVariablesForColors],
+  plugins: [require("tailwindcss-animate"),addVariablesForColors,require('preline/plugin'),
+],
 } satisfies Config
 
 function addVariablesForColors({ addBase, theme }: any) {

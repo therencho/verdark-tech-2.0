@@ -3,146 +3,22 @@ import Card from "@/components/Card";
 import CardStackSection from "@/components/CardStackSection";
 import Heading from "@/components/Heading";
 import MacbookScrollSection from "@/components/MacbookScrollSection";
-import Typewriter from "@/components/Typewriter";
 import Hero from "@/components/hero";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
+import { LongTextGenerateEffect } from "@/components/ui/long-text-generate-effect";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import Image from "next/image";
+import simple_set_up from "../../public/assets/simple-set-up.png";
+import secure_trading from "../../public/assets/secure_trading.png";
+import cos_start from "../../public/assets/costomisable_strat.png";
+import IMG24 from "../../public/assets/24_7.png";
+import backtesting from "../../public/assets/back_test.png";
+import Powerfull_analytics from "../../public/assets/power_analytics.png";
+import simple from "../../public/assets/simple.webp"
+import secure from "../../public/assets/secure.webp"
+import fast from "../../public/assets/fast.webp"
 
-export const projects = [
-  {
-    title: "Stripe",
-    description:
-      "A technology company that builds economic infrastructure for the internet.",
-    link: "https://stripe.com",
-  },
-  {
-    title: "Netflix",
-    description:
-      "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
-    link: "https://netflix.com",
-  },
-  {
-    title: "Google",
-    description:
-      "A multinational technology company that specializes in Internet-related services and products.",
-    link: "https://google.com",
-  },
-  {
-    title: "Meta",
-    description:
-      "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
-    link: "https://meta.com",
-  },
-  {
-    title: "Amazon",
-    description:
-      "A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.",
-    link: "https://amazon.com",
-  },
-  {
-    title: "Microsoft",
-    description:
-      "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
-    link: "https://microsoft.com",
-  },
-];
-export const products = [
-  {
-    title: "Moonbeam",
-    link: "https://gomoonbeam.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
-  },
-  {
-    title: "Cursor",
-    link: "https://cursor.so",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cursor.png",
-  },
-  {
-    title: "Rogue",
-    link: "https://userogue.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/rogue.png",
-  },
 
-  {
-    title: "Editorially",
-    link: "https://editorially.org",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editorially.png",
-  },
-  {
-    title: "Editrix AI",
-    link: "https://editrix.ai",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editrix.png",
-  },
-  {
-    title: "Pixel Perfect",
-    link: "https://app.pixelperfect.quest",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
-  },
-
-  {
-    title: "Algochurn",
-    link: "https://algochurn.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/algochurn.png",
-  },
-  {
-    title: "Aceternity UI",
-    link: "https://ui.aceternity.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
-  },
-  {
-    title: "Tailwind Master Kit",
-    link: "https://tailwindmasterkit.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
-  },
-  {
-    title: "SmartBridge",
-    link: "https://smartbridgetech.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
-  },
-  {
-    title: "Renderwork Studio",
-    link: "https://renderwork.studio",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
-  },
-
-  {
-    title: "Creme Digital",
-    link: "https://cremedigital.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
-  },
-  {
-    title: "Golden Bells Academy",
-    link: "https://goldenbellsacademy.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
-  },
-  {
-    title: "Invoker Labs",
-    link: "https://invoker.lol",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/invoker.png",
-  },
-  {
-    title: "E Free Invoice",
-    link: "https://efreeinvoice.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
-  },
-];
 const AceternityLogo = () => {
   return (
     <svg
@@ -336,6 +212,185 @@ const AceternityLogo3 = () => {
   );
 };
 
+const AceternityLogo4 = () => {
+  return (
+    <svg
+      width="134"
+      height="24"
+      viewBox="0 0 134 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M6.36408 19.022C3.50136 19.022 0.699219 16.9621 0.699219 12.312C0.699219 7.64684 3.50136 5.61719 6.36408 5.61719C7.77272 5.61719 8.87843 5.98071 9.66606 6.4957L8.8027 8.38903C8.27256 8.01036 7.48493 7.76802 6.69731 7.76802C4.97058 7.76802 3.39533 9.13122 3.39533 12.2817C3.39533 15.4322 5.01602 16.8257 6.69731 16.8257C7.48493 16.8257 8.27256 16.5834 8.8027 16.2047L9.66606 18.1435C8.84813 18.6888 7.77272 19.022 6.36408 19.022Z"
+        fill="black"
+      ></path>
+      <path
+        d="M16.2235 19.022C12.5731 19.022 10.5586 16.129 10.5586 12.312C10.5586 8.49506 12.558 5.61719 16.2235 5.61719C19.8738 5.61719 21.8883 8.47991 21.8883 12.312C21.8883 16.129 19.8738 19.022 16.2235 19.022ZM16.2235 7.69228C14.1938 7.69228 13.1941 9.50989 13.1941 12.2817C13.1941 15.0536 14.1938 16.8863 16.2235 16.8863C18.2531 16.8863 19.2528 15.0536 19.2528 12.2817C19.2528 9.50989 18.2531 7.69228 16.2235 7.69228Z"
+        fill="black"
+      ></path>
+      <path
+        d="M25.4039 3.54688C24.5405 3.54688 23.8438 2.88042 23.8438 2.0625C23.8438 1.24458 24.5405 0.578125 25.4039 0.578125C26.2672 0.578125 26.964 1.24458 26.964 2.0625C26.964 2.88042 26.2521 3.54688 25.4039 3.54688ZM24.0861 5.87947H26.7216V18.7541H24.0861V5.87947Z"
+        fill="black"
+      ></path>
+      <path
+        d="M37.0509 18.7494V10.1612C37.0509 8.66167 36.1421 7.72258 34.3548 7.72258C33.4006 7.72258 32.5221 7.88919 31.9919 8.10124V18.7645H29.3867V6.52599C30.6742 5.99585 32.3252 5.61719 34.3397 5.61719C37.9446 5.61719 39.6865 7.19244 39.6865 9.91885V18.7645H37.0509"
+        fill="black"
+      ></path>
+      <path
+        d="M46.6054 19.0242C44.9393 19.0242 43.2883 18.6153 42.2734 18.1154V0H44.8787V6.21014C45.4997 5.92235 46.4994 5.68001 47.393 5.68001C50.7101 5.68001 52.967 8.07318 52.967 12.0113C52.967 16.8734 50.4526 19.0242 46.6054 19.0242ZM46.9386 7.72481C46.2267 7.72481 45.3785 7.89142 44.8787 8.14892V16.6008C45.2573 16.7674 45.9995 16.934 46.7417 16.934C48.8168 16.934 50.3466 15.4951 50.3466 12.2082C50.3618 9.39095 49.0289 7.72481 46.9386 7.72481Z"
+        fill="black"
+      ></path>
+      <path
+        d="M60.0584 19.022C56.3626 19.022 54.4844 17.5225 54.4844 14.9778C54.4844 11.3881 58.3013 10.7519 62.194 10.5399V9.72194C62.194 8.10124 61.1186 7.52567 59.4676 7.52567C58.2559 7.52567 56.7715 7.90434 55.9082 8.3133L55.2417 6.52599C56.2717 6.07159 58.0136 5.61719 59.7403 5.61719C62.8151 5.61719 64.6932 6.81378 64.6932 9.99458V18.1132C63.7693 18.613 61.876 19.022 60.0584 19.022ZM62.2092 12.2817C59.5737 12.418 56.9533 12.6452 56.9533 14.9324C56.9533 16.2956 57.9984 17.1287 59.9826 17.1287C60.8157 17.1287 61.8002 16.9923 62.2092 16.7954V12.2817Z"
+        fill="black"
+      ></path>
+      <path
+        d="M70.5725 19.022C69.0729 19.022 67.4977 18.613 66.5586 18.1132L67.4371 16.1138C68.1036 16.5228 69.5122 16.9469 70.4967 16.9469C71.9054 16.9469 72.8445 16.2502 72.8445 15.1747C72.8445 14.0085 71.8599 13.5541 70.5573 13.0694C68.8306 12.418 66.907 11.6304 66.907 9.2221C66.907 7.10156 68.558 5.61719 71.4207 5.61719C72.9808 5.61719 74.2683 5.99585 75.1771 6.52599L74.3591 8.34359C73.7836 7.98007 72.6324 7.58626 71.7085 7.58626C70.3453 7.58626 69.5879 8.29815 69.5879 9.23725C69.5879 10.4035 70.5422 10.8125 71.8145 11.2972C73.6018 11.9636 75.586 12.7058 75.586 15.2202C75.5709 17.5073 73.7987 19.022 70.5725 19.022Z"
+        fill="black"
+      ></path>
+      <path
+        d="M88.2812 12.2549L79.7234 13.4515C79.9809 15.7689 81.4955 16.9352 83.6615 16.9352C84.949 16.9352 86.3425 16.6171 87.221 16.1476L87.9783 18.1015C86.9786 18.6316 85.2519 19.0103 83.4798 19.0103C79.4204 19.0103 77.1484 16.4051 77.1484 12.3003C77.1484 8.36217 79.3447 5.60547 82.9496 5.60547C86.297 5.60547 88.2812 7.80174 88.2812 11.2703C88.3115 11.5884 88.3115 11.9216 88.2812 12.2549ZM82.9345 7.5291C80.9351 7.5291 79.6173 9.05891 79.5719 11.7399L85.8123 10.8765C85.782 8.63481 84.646 7.5291 82.9345 7.5291Z"
+        fill="black"
+      ></path>
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M97.4922 23.5149V0.460938H98.3221V23.5149H97.4922Z"
+        fill="black"
+      ></path>
+      <path
+        d="M109.448 13.6516V18.9079H108.508V5.85938H111.874C113.404 5.85938 114.557 6.19443 115.332 6.86453C116.113 7.53463 116.503 8.49061 116.503 9.73245C116.503 10.3042 116.395 10.8298 116.18 11.3093C115.971 11.7889 115.667 12.2038 115.267 12.5543C114.868 12.8985 114.382 13.169 113.81 13.3658C113.238 13.5563 112.593 13.6516 111.874 13.6516H109.448ZM109.448 12.8955H111.874C112.452 12.8955 112.968 12.8155 113.423 12.6557C113.878 12.4959 114.262 12.2745 114.576 11.9917C114.895 11.7089 115.138 11.377 115.304 10.9958C115.476 10.6085 115.562 10.1874 115.562 9.73245C115.562 8.73037 115.252 7.95883 114.631 7.41783C114.016 6.87683 113.097 6.60632 111.874 6.60632H109.448V12.8955Z"
+        fill="black"
+      ></path>
+      <path
+        d="M118.739 18.9079V9.73245H119.2C119.305 9.73245 119.379 9.75397 119.422 9.797C119.471 9.84003 119.498 9.91381 119.505 10.0183L119.578 11.9549C119.873 11.211 120.267 10.63 120.759 10.212C121.251 9.78778 121.856 9.57568 122.575 9.57568C122.852 9.57568 123.107 9.60642 123.341 9.6679C123.574 9.72323 123.796 9.80622 124.005 9.91688L123.885 10.5255C123.866 10.6239 123.805 10.6731 123.7 10.6731C123.664 10.6731 123.611 10.6608 123.544 10.6362C123.476 10.6116 123.39 10.5839 123.285 10.5532C123.187 10.5224 123.064 10.4948 122.917 10.4702C122.769 10.4456 122.6 10.4333 122.409 10.4333C121.715 10.4333 121.143 10.6485 120.694 11.0788C120.252 11.5091 119.892 12.1301 119.615 12.9416V18.9079H118.739Z"
+        fill="black"
+      ></path>
+      <path
+        d="M129.565 9.5849C130.222 9.5849 130.81 9.69864 131.326 9.9261C131.849 10.1474 132.288 10.464 132.645 10.8759C133.001 11.2878 133.272 11.7858 133.456 12.3698C133.647 12.9477 133.742 13.5963 133.742 14.3156C133.742 15.0349 133.647 15.6835 133.456 16.2613C133.272 16.8392 133.001 17.3341 132.645 17.746C132.288 18.1579 131.849 18.4745 131.326 18.6958C130.81 18.9172 130.222 19.0278 129.565 19.0278C128.907 19.0278 128.317 18.9172 127.794 18.6958C127.278 18.4745 126.838 18.1579 126.475 17.746C126.119 17.3341 125.845 16.8392 125.655 16.2613C125.47 15.6835 125.378 15.0349 125.378 14.3156C125.378 13.5963 125.47 12.9477 125.655 12.3698C125.845 11.7858 126.119 11.2878 126.475 10.8759C126.838 10.464 127.278 10.1474 127.794 9.9261C128.317 9.69864 128.907 9.5849 129.565 9.5849ZM129.565 18.3362C130.112 18.3362 130.588 18.244 130.994 18.0596C131.406 17.869 131.747 17.5985 132.018 17.2481C132.294 16.8976 132.5 16.4765 132.635 15.9847C132.771 15.4867 132.838 14.9304 132.838 14.3156C132.838 13.707 132.771 13.1537 132.635 12.6557C132.5 12.1577 132.294 11.7335 132.018 11.3831C131.747 11.0265 131.406 10.753 130.994 10.5624C130.588 10.3718 130.112 10.2765 129.565 10.2765C129.017 10.2765 128.538 10.3718 128.126 10.5624C127.72 10.753 127.379 11.0265 127.102 11.3831C126.832 11.7335 126.626 12.1577 126.485 12.6557C126.349 13.1537 126.282 13.707 126.282 14.3156C126.282 14.9304 126.349 15.4867 126.485 15.9847C126.626 16.4765 126.832 16.8976 127.102 17.2481C127.379 17.5985 127.72 17.869 128.126 18.0596C128.538 18.244 129.017 18.3362 129.565 18.3362Z"
+        fill="black"
+      ></path>
+    </svg>
+  );
+};
+
+const AceternityLogo5 = () => {
+  return (
+    <svg
+      width="73"
+      height="25"
+      viewBox="0 0 73 25"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M34.4488 5.64877C34.5223 5.64877 34.5818 5.64877 34.6448 5.64877C37.1715 5.64877 39.6947 5.64177 42.2214 5.65227C43.4042 5.65577 44.5416 5.87274 45.5775 6.47117C46.9353 7.25857 47.6772 8.46593 47.9117 10.0022C48.0517 10.9156 48.0237 11.815 47.6667 12.6829C47.2783 13.6243 46.6588 14.3662 45.7664 14.8737C45.7384 14.8911 45.7104 14.9086 45.6615 14.9401C45.7244 14.9751 45.7699 15.0066 45.8189 15.0311C47.3063 15.8185 48.1007 17.0644 48.2301 18.7337C48.3141 19.8046 48.1777 20.8404 47.7157 21.8168C47.0718 23.1711 45.9799 23.99 44.5696 24.4205C43.8732 24.634 43.1558 24.7145 42.4313 24.718C39.8347 24.7215 37.2415 24.718 34.6448 24.718C34.5818 24.718 34.5188 24.718 34.4453 24.718C34.4488 18.3522 34.4488 12.011 34.4488 5.64877ZM38.1619 21.3724C38.2039 21.3794 38.2319 21.3864 38.2599 21.3864C39.5827 21.3864 40.9055 21.4074 42.2284 21.3794C43.6037 21.3514 44.4856 20.4625 44.5241 19.1011C44.5416 18.4467 44.3701 17.8553 43.8942 17.3793C43.4077 16.8929 42.7953 16.7214 42.1269 16.7179C40.867 16.7109 39.6107 16.7144 38.3508 16.7179C38.2878 16.7179 38.2284 16.7249 38.1619 16.7284C38.1619 18.2787 38.1619 19.8151 38.1619 21.3724ZM38.1654 8.96637C38.1654 10.4397 38.1654 11.8885 38.1654 13.3583C38.2459 13.3583 38.3123 13.3583 38.3788 13.3583C39.2887 13.3583 40.1986 13.3618 41.1085 13.3583C41.4865 13.3583 41.8679 13.3618 42.2424 13.3268C43.4217 13.2254 44.1636 12.4939 44.2511 11.3181C44.3246 10.3067 43.8522 9.42481 42.7813 9.12035C42.4278 9.01886 42.0499 8.98037 41.6789 8.97337C40.5766 8.95587 39.4742 8.96637 38.3718 8.96637C38.3053 8.96637 38.2389 8.96637 38.1654 8.96637Z"
+        fill="black"
+      ></path>
+      <path
+        d="M0.982422 24.7145C0.982422 18.3522 0.982422 12.0145 0.982422 5.65927C1.04891 5.65577 1.11191 5.64877 1.1749 5.64877C3.70509 5.64877 6.23878 5.64177 8.76898 5.65227C10.0008 5.65577 11.1802 5.89024 12.2441 6.54816C13.4759 7.30757 14.1723 8.42743 14.4243 9.83776C14.5888 10.7581 14.5888 11.6715 14.2528 12.5604C13.8784 13.5578 13.2414 14.3347 12.3175 14.8702C12.2826 14.8911 12.2511 14.9121 12.1986 14.9436C12.2616 14.9786 12.3035 15.0031 12.3455 15.0276C13.7454 15.7625 14.5538 16.9104 14.7428 18.4782C14.8792 19.6156 14.7603 20.7249 14.2738 21.7748C13.6754 23.0732 12.6535 23.8956 11.3167 24.3505C10.5608 24.6095 9.77686 24.711 8.97895 24.7145C6.37877 24.718 3.77858 24.7145 1.1749 24.7145C1.11891 24.7145 1.06291 24.7145 0.982422 24.7145ZM4.70947 16.7284C4.70947 18.2857 4.70947 19.8291 4.70947 21.3724C4.74797 21.3759 4.77596 21.3829 4.80396 21.3829C6.1198 21.3829 7.43914 21.3899 8.75498 21.3794C9.30791 21.3759 9.82235 21.2149 10.2633 20.8614C10.9772 20.284 11.2537 19.1956 10.9352 18.2122C10.6552 17.3408 9.87484 16.7494 8.87746 16.7284C7.51263 16.7004 6.1513 16.7179 4.78646 16.7144C4.76896 16.7144 4.74447 16.7214 4.70947 16.7284ZM4.70947 8.97687C4.70947 10.4432 4.70947 11.892 4.70947 13.3583C4.78996 13.3583 4.85645 13.3583 4.92644 13.3583C6.05681 13.3583 7.18717 13.3618 8.32103 13.3548C8.566 13.3548 8.81097 13.3338 9.04894 13.2848C9.76986 13.1414 10.3298 12.7739 10.6308 12.074C10.7917 11.696 10.8267 11.2936 10.7847 10.8911C10.7007 10.0967 10.3018 9.5228 9.55988 9.19734C9.13293 9.01186 8.68149 8.96987 8.22654 8.96637C7.11718 8.96287 6.01131 8.96637 4.90195 8.96637C4.83895 8.96637 4.77596 8.97337 4.70947 8.97687Z"
+        fill="black"
+      ></path>
+      <path
+        d="M16.7168 5.64803C16.8183 5.64803 16.8813 5.64803 16.9443 5.64803C18.1516 5.64803 19.359 5.65153 20.5663 5.64453C20.7203 5.64453 20.7903 5.69702 20.8498 5.83001C21.9732 8.26571 23.1035 10.7014 24.2304 13.1371C24.2549 13.1896 24.2829 13.2351 24.3214 13.3121C24.4614 13.0111 24.5873 12.7312 24.7168 12.4512C25.7317 10.2325 26.7431 8.01374 27.7545 5.79501C27.8 5.69003 27.8524 5.64453 27.9714 5.64453C29.2138 5.64803 30.4561 5.64803 31.6985 5.64803C31.744 5.64803 31.7895 5.65503 31.863 5.65853C31.7685 5.84751 31.6845 6.02249 31.597 6.19746C30.5296 8.29371 29.4587 10.39 28.3914 12.4862C27.66 13.9175 26.9321 15.3489 26.2076 16.7837C26.1692 16.8607 26.1517 16.9622 26.1517 17.0496C26.1482 19.5273 26.1482 22.005 26.1482 24.4862C26.1482 24.5562 26.1482 24.6227 26.1482 24.7032C24.9093 24.7032 23.688 24.7032 22.4421 24.7032C22.4421 24.6332 22.4421 24.5667 22.4421 24.5002C22.4421 22.0225 22.4421 19.5448 22.4386 17.0636C22.4386 16.9622 22.4176 16.8537 22.3721 16.7662C20.5313 13.1476 18.6906 9.53256 16.8463 5.9175C16.8078 5.83701 16.7693 5.76002 16.7168 5.64803Z"
+        fill="black"
+      ></path>
+      <path
+        d="M68.0351 24.7039C66.7928 24.7039 65.5679 24.7039 64.3186 24.7039C64.3186 19.4615 64.3186 14.2261 64.3186 8.96978C62.6493 8.96978 61.0045 8.96978 59.3457 8.96978C59.3457 7.85341 59.3457 6.76155 59.3457 5.65918C63.9022 5.65918 68.4446 5.65918 73.001 5.65918C73.001 6.76155 73.001 7.85341 73.001 8.96628C71.3422 8.96628 69.6974 8.96628 68.0351 8.96628C68.0351 14.2226 68.0351 19.458 68.0351 24.7039Z"
+        fill="black"
+      ></path>
+      <path
+        d="M56.028 19.0482C54.7961 19.0482 53.5748 19.0482 52.3359 19.0482C52.3359 12.7035 52.3359 6.35873 52.3359 0C53.5608 0 54.7891 0 56.028 0C56.028 6.34823 56.028 12.693 56.028 19.0482Z"
+        fill="black"
+      ></path>
+    </svg>
+  );
+};
+
+const BitCoin = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="32"
+      height="32"
+      viewBox="0 0 32 32"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M16 32C7.163 32 0 24.837 0 16S7.163 0 16 0s16 7.163 16 16-7.163 16-16 16zm7.189-17.98c.314-2.096-1.283-3.223-3.465-3.975l.708-2.84-1.728-.43-.69 2.765c-.454-.114-.92-.22-1.385-.326l.695-2.783L15.596 6l-.708 2.839c-.376-.086-.746-.17-1.104-.26l.002-.009-2.384-.595-.46 1.846s1.283.294 1.256.312c.7.175.826.638.805 1.006l-.806 3.235c.048.012.11.03.18.057l-.183-.045-1.13 4.532c-.086.212-.303.531-.793.41.018.025-1.256-.313-1.256-.313l-.858 1.978 2.25.561c.418.105.828.215 1.231.318l-.715 2.872 1.727.43.708-2.84c.472.127.93.245 1.378.357l-.706 2.828 1.728.43.715-2.866c2.948.558 5.164.333 6.097-2.333.752-2.146-.037-3.385-1.588-4.192 1.13-.26 1.98-1.003 2.207-2.538zm-3.95 5.538c-.533 2.147-4.148.986-5.32.695l.95-3.805c1.172.293 4.929.872 4.37 3.11zm.535-5.569c-.487 1.953-3.495.96-4.47.717l.86-3.45c.975.243 4.118.696 3.61 2.733z"
+      />
+    </svg>
+  );
+};
+
+const ETH = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="32"
+      height="32"
+      viewBox="0 0 32 32"
+    >
+      <g fill-rule="evenodd">
+        <path d="M16 32C7.163 32 0 24.837 0 16S7.163 0 16 0s16 7.163 16 16-7.163 16-16 16zm7.994-15.781L16.498 4 9 16.22l7.498 4.353 7.496-4.354zM24 17.616l-7.502 4.351L9 17.617l7.498 10.378L24 17.616z" />
+        <g fill-rule="nonzero">
+          <path
+            fill-opacity=".298"
+            d="M16.498 4v8.87l7.497 3.35zm0 17.968v6.027L24 17.616z"
+          />
+          <path
+            fill-opacity=".801"
+            d="M16.498 20.573l7.497-4.353-7.497-3.348z"
+          />
+          <path fill-opacity=".298" d="M9 16.22l7.498 4.353v-7.701z" />
+        </g>
+      </g>
+    </svg>
+  );
+};
+
+const DOGE = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="32"
+      height="32"
+      viewBox="0 0 32 32"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M16 32C7.163 32 0 24.837 0 16S7.163 0 16 0s16 7.163 16 16-7.163 16-16 16zm-5.518-15.104V24h6.549c1.21 0 2.257-.21 3.142-.627.885-.419 1.607-.99 2.168-1.715.56-.724.977-1.572 1.25-2.543.273-.971.409-2.01.409-3.115a11.47 11.47 0 00-.41-3.115c-.272-.97-.689-1.819-1.25-2.543-.56-.725-1.282-1.296-2.167-1.715C19.288 8.21 18.24 8 17.03 8h-6.549v6.61H9v2.286h1.482zm2.766-2.285v-4.325h2.721c1.077 0 1.958.145 2.644.437.686.291 1.224.694 1.615 1.21a4.4 4.4 0 01.796 1.815c.14.695.21 1.445.21 2.252a11.4 11.4 0 01-.21 2.252c-.14.695-.405 1.3-.796 1.815-.391.516-.93.919-1.615 1.21-.686.292-1.567.437-2.644.437h-2.721v-4.818h4.314v-2.285h-4.314z"
+      />
+    </svg>
+  );
+};
+const SOl = () => {
+  return (
+    <svg
+      width="32"
+      height="32"
+      viewBox="0 0 32 32"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M16 0c8.837 0 16 7.163 16 16s-7.163 16-16 16S0 24.837 0 16 7.163 0 16 0zm8.706 19.517H10.34a.59.59 0 00-.415.17l-2.838 2.815a.291.291 0 00.207.498H21.66a.59.59 0 00.415-.17l2.838-2.816a.291.291 0 00-.207-.497zm-3.046-5.292H7.294l-.068.007a.291.291 0 00-.14.49l2.84 2.816.07.06c.1.07.22.11.344.11h14.366l.068-.007a.291.291 0 00.14-.49l-2.84-2.816-.07-.06a.59.59 0 00-.344-.11zM24.706 9H10.34a.59.59 0 00-.415.17l-2.838 2.816a.291.291 0 00.207.497H21.66a.59.59 0 00.415-.17l2.838-2.815A.291.291 0 0024.706 9z" />
+    </svg>
+  );
+};
+
+const PAC = () => {
+  return (
+    <svg
+      width="32"
+      height="32"
+      viewBox="0 0 32 32"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M16 32C7.163 32 0 24.837 0 16S7.163 0 16 0s16 7.163 16 16-7.163 16-16 16zm-.065-28C9.342 4.001 4 9.347 4 15.94c.001 6.592 5.347 11.936 11.94 11.935 6.592-.002 11.936-5.347 11.935-11.94A11.937 11.937 0 0015.935 4zm-4.847 5.23a.123.123 0 01.125-.12h4.973a6.98 6.98 0 013.027.628c.18.088.357.186.528.292l-3.237 1.853h-1.689a.123.123 0 00-.12.126v.932l-3.607 2.086V9.23zM9.749 19.708l-2.162-2.184 7.12-4.108v2.662a.123.123 0 00.125.12h1.017l-6.093 3.51h-.007zm10.662-2.03c-1.044.872-2.477 1.308-4.299 1.308h-1.297a.123.123 0 00-.123.123v2.688l-1.81 1.042-1.69.977-.107.06v-4.455l5.603-3.224a2.056 2.056 0 001.297-.513 1.74 1.74 0 00.318-.432l3.578-2.071c.06.328.09.66.089.994.004 1.463-.516 2.63-1.56 3.503zm-1.92-3.019c.024-.153.036-.309.037-.464a2.417 2.417 0 00-.563-1.674A1.823 1.823 0 0017.15 12l4.973-2.871 2.182 2.183-5.814 3.347z" />
+    </svg>
+  );
+};
+
 const testimonials = [
   {
     images: <AceternityLogo />,
@@ -354,40 +409,55 @@ const testimonials = [
     title: "A Dream Within a Dream",
   },
   {
-    images: <AceternityLogo2 />,
-
+    images: <AceternityLogo4 />,
     name: "Jane Austen",
     title: "Pride and Prejudice",
   },
   {
-    images: <AceternityLogo3 />,
-
+    images: <AceternityLogo5 />,
     name: "Herman Melville",
     title: "Moby-Dick",
   },
 ];
 
-const words = `Simple Safe Secure`;
+const testimonials1 = [
+  {
+    images: <BitCoin />,
+    name: "Charles Dickens 1",
+    title: "A Tale of Two Cities 1",
+  },
+  {
+    images: <ETH />,
+
+    name: "William Shakespeare",
+    title: "Hamlet",
+  },
+  {
+    images: <DOGE />,
+    name: "Edgar Allan Poe",
+    title: "A Dream Within a Dream",
+  },
+  {
+    images: <SOl />,
+    name: "Jane Austen",
+    title: "Pride and Prejudice",
+  },
+  {
+    images: <PAC />,
+    name: "Herman Melville",
+    title: "Moby-Dick",
+  },
+];
 
 const content = [
   {
-    title: "Collaborative Editing",
+    title: "Embrace Simplicity",
     description:
-      "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
+      "Effortlessly navigate the crypto market with Vedark's user-friendly interface. Our intuitive design allows you to set up and manage your automated trading strategies with ease, even if you're new to crypto.",
     content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-        Collaborative Editing
-      </div>
-    ),
-  },
-  {
-    title: "Real time changes",
-    description:
-      "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
-    content: (
-      <div className="h-full w-full  flex items-center justify-center text-white">
+      <div className="h-full w-full  flex items-center justify-right text-white">
         <Image
-          src="/linear.webp"
+          src={simple}
           width={300}
           height={300}
           className="h-full w-full object-cover"
@@ -397,19 +467,40 @@ const content = [
     ),
   },
   {
-    title: "Version control",
+    title: "Prioritize Security",
     description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+      "Vedark prioritizes the security of your crypto assets. Our robust security measures, including API Key Permissions, Whitelisting Withdrawal Addresses, advanced encryption and two-factor authentication, ensure your funds remain protected while you trade.",
     content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
-        Version control
+      <div className="h-full w-full  flex items-center justify-center text-white">
+        <Image
+          src={secure}
+          width={300}
+          height={300}
+          className="h-full w-full object-cover"
+          alt="linear board demo"
+        />
       </div>
     ),
   },
   {
-    title: "Running out of content",
+    title: "Experience Speed",
     description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+      "Don't let fleeting market moments slip away. Vedark boasts lightning-fast trade execution powered by sophisticated algorithms. These algorithms analyze market conditions in real-time, allowing Vedark to place and execute your trades with precision and unparalleled speed. This agility gives you a crucial edge in the dynamic crypto market, helping you capitalize on sudden price fluctuations and maximize your potential returns. With Vedark at the helm, you can trade with confidence, knowing your orders are executed swiftly and efficiently. ",
+    content: (
+      <div className="h-full w-full  flex items-center justify-center text-white">
+        <Image
+          src={fast}
+          width={300}
+          height={300}
+          className="h-full w-full object-cover"
+          alt="linear board demo"
+        />
+      </div>
+    ),
+  },
+  {
+    title: "",
+    description: "",
     content: (
       <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
         Running out of content
@@ -418,42 +509,72 @@ const content = [
   },
 ];
 
+const words = `Intrigued by automated crypto success? Scroll down to discover how Vedark can become your ultimate crypto trading partner.
+`;
 export default function Home() {
   return (
-    <main className="flex  min-h-screen flex-col items-center justify-between p-10">
+    <main className="flex min-h-screen flex-col items-center justify-between md:p-10 p-4">
       <Hero />
-      <InfiniteMovingCards
-        items={testimonials}
-        speed="normal"
-        direction="right"
-        className="my-10"
+
+      <InfiniteMovingCards items={testimonials} direction="right" />
+
+      <LongTextGenerateEffect
+        words={words}
+        className="max-w-screen-xl mx-auto mb-16"
       />
-      <TextGenerateEffect words={words} className="my-2 w-full p-10" />
 
       <StickyScroll content={content} />
 
-      <Heading title="Why Us"/>
-      <div className="grid grid-cols-3 gap-8 justify-center my-10">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+      <Heading
+        title="Unveiling the Power of Vedark"
+        subtitle="Effortless, Secure, and Profitable Crypto Trading"
+      />
+
+      <div className="flex flex-wrap gap-8 justify-center max-w-screen-xl mx-auto w-full">
+        <Card
+          description="Get started effortlessly with Vedark's intuitive interface. No coding required!"
+          image={simple_set_up}
+          title="Simple Setup"
+        />
+        <Card
+          description="Vedark prioritizes security with features like AES-256 and API key permissions"
+          image={secure_trading}
+          title="Secure Trading"
+        />
+        <Card
+          description="Build personalized trading strategies or choose from pre-built templates."
+          image={cos_start}
+          title="Customizable Strategies"
+        />
+        <Card
+          description="Vedark works around the clock, so you don't miss any opportunity."
+          image={IMG24}
+          title="24/7 Automation"
+        />
+        <Card
+          description="Test your strategies before going live. Optimize IT for maximum gains."
+          image={backtesting}
+          title="Backtesting Made Easy"
+        />
+        <Card
+          description="Gain insights into your performance and make informed decisions."
+          image={Powerfull_analytics}
+          title="Powerful Analytics"
+        />
       </div>
+      {/* <Heading title="Why Us" subtitle="Just For Fun Bro" /> */}
 
       <MacbookScrollSection />
 
-      <InfiniteMovingCards
-        items={testimonials}
-        speed="normal"
-        direction="right"
-      />
+      <InfiniteMovingCards items={testimonials1} direction="right" />
+
       <BackgroundBeamsSection />
+      <Heading
+        title="Still Not Convinced?"
+        subtitle="Don't just take our word for it. Hear from real users who have experienced the power of Vedark in their crypto trading journey. "
+      />
 
       <CardStackSection />
-
-      <Typewriter />
     </main>
   );
 }
